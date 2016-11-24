@@ -206,7 +206,7 @@ getifaddrs() ->
     end.
 
 -spec stats(ewpcap_resource())
-    -> {'ok', ewpcap_stat()} | {'error', string()}.
+    -> {'ok', #ewpcap_stat{}} | {'error', string()}.
 stats(#ewpcap_resource{res = Res}) ->
     pcap_stats(Res).
 
